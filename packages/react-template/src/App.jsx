@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from 'antd'
+import { Suspense, useState } from 'react'
+import { Outlet } from 'react-router'
+import { useCommonStore } from './stores'
 
-function App() {
-    const [count, setCount] = useState(0)
+const App = () => {
+    const [title] = useState('React')
+    const { bears } = useCommonStore()
 
     return (
         <>
-            <div className="text-red">{count}</div>
-            <Button onClick={() => setCount(count + 1)}>Add</Button>
+            <div>
+                <header>{title}</header>
+                <main>
+                    {bears}
+                    <Suspense fallback={() => <div>Loading...</div>}>
+                        <Outlet></Outlet>
+                    </Suspense>
+                </main>
+            </div>
         </>
     )
 }

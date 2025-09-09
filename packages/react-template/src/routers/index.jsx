@@ -1,9 +1,14 @@
 import { createBrowserRouter } from 'react-router'
-import Home from '@/pages/home/index'
+import { lazy } from 'react'
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />,
+        Component: lazy(() => import('@/App')),
+        children: [{ path: '/home', Component: lazy(() => import('@/pages/home/index')) }],
+    },
+    {
+        path: '/about',
+        Component: lazy(() => import('@/pages/about/index')),
     },
 ])
