@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "temp",
+        "rootDir": ".",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "types": ["node"],
+        "lib": ["ESNext"],
+        "allowJs": true
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["scripts/*"]
+}

@@ -30,3 +30,5 @@ pnpm-lock.yaml
 
 deploy
 tsconfig.tsbuildinfo
+docs/.vitepress/dist
+docs/.vitepress/cache
