@@ -3,7 +3,7 @@ import { Axios } from 'axios'
 export const baseURL = './'
 
 const headers = {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
 }
 
 const axios = new Axios({
@@ -14,8 +14,8 @@ const axios = new Axios({
     transformResponse: [
         function (data) {
             return JSON.parse(data)
-        }
-    ]
+        },
+    ],
 })
 
 axios.interceptors.request.use((request) => {
@@ -36,7 +36,7 @@ const request = ({ url = '', method = 'get', params = {}, signal, ...args }) => 
         data: JSON.stringify(_data),
         params: _params,
         signal,
-        ...args
+        ...args,
     })
 }
 

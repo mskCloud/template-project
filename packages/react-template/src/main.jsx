@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router'
 import { router } from '@/routers/index.jsx'
 import 'virtual:uno.css'
 
-const root = document.getElementById("root");
+const root = document.getElementById('root')
 createRoot(root).render(
     <StrictMode>
         <RouterProvider router={router}></RouterProvider>

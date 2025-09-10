@@ -1,7 +1,7 @@
 import * as mock from './modules/mock'
 
 const api = {
-    mock
+    mock,
 }
 
 export default api
